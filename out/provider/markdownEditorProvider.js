@@ -86,7 +86,11 @@ class MarkdownEditorProvider {
                 content: this.text[document.uri.fsPath],
             });
         });
+        // 防止轮询与用户编辑冲突的时间戳
+        let lastEditTime = 0;
         handler.on("change", (content) => {
+            lastEditTime = Date.now();
+            this.text[document.uri.fsPath] = content;
             this.updateTextDocument(document, content);
         });
         // 监听文件变化自动更新
@@ -110,7 +114,9 @@ class MarkdownEditorProvider {
             }
         });
         // 轮询检测文件变化（支持Remote/codelab环境，外部CLI修改时自动刷新）
+        // 用户编辑后2秒内不轮询，避免光标跳回开头
         const pollInterval = setInterval(async () => {
+            if (Date.now() - lastEditTime < 2000) return;
             try {
                 const raw = await vscode.workspace.fs.readFile(document.uri);
                 const content = Buffer.from(raw).toString('utf8');
