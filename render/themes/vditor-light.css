@@ -1,0 +1,68 @@
+/* Vditor Light Theme (default) for Md Editor */
+.vditor-reset h1, .vditor-reset h2 {
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eaecef !important;
+}
+
+.vditor-reset hr {
+    background-color: #eaecef !important;
+}
+
+.vditor-reset blockquote {
+    color: #6a737d !important;
+    border-left: .25em solid #eaecef !important;
+}
+
+.vditor-reset iframe {
+    border: 1px solid #d1d5da;
+}
+
+.vditor-reset table tr {
+    border-top: 1px solid #c6cbd1 !important;
+    background-color: #fafbfc !important;
+}
+
+.vditor-reset table td, .vditor-reset table th {
+    border: 1px solid #dfe2e5 !important;
+}
+
+.vditor-reset table tbody tr:nth-child(2n) {
+    background-color: #fff !important;
+}
+
+.vditor-reset code:not(.hljs):not(.highlight-chroma):not(pre code) {
+    background-color: rgba(27, 31, 35, .05) !important;
+}
+
+.vditor-reset kbd {
+    color: #24292e !important;
+    background-color: #fafbfc !important;
+    border: solid 1px #d1d5da;
+    box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.vditor-speech {
+    background-color: #f6f8fa !important;
+    border: 1px solid #d1d5da;
+    color: #586069 !important;
+}
+
+.vditor-speech--current, .vditor-speech:hover {
+    color: #4285f4 !important;
+}
+
+.vditor-linkcard a {
+    background-color: #f6f8fa !important;
+}
+
+.vditor-linkcard__title {
+    color: #24292e !important;
+}
+
+.vditor-linkcard__abstract {
+    color: #586069 !important;
+}
+
+.vditor-linkcard__site {
+    color: #4285f4 !important;
+}

@@ -33,12 +33,13 @@
 				"md-editor.theme": {
 					"type": "string",
 					"default": "github",
-					"enum": ["none", "github", "typora-clean", "claude-like"],
+					"enum": ["none", "github", "typora-clean", "claude-like", "vditor-light"],
 					"enumDescriptions": [
 						"No built-in theme (use customCss only)",
 						"GitHub style - clean and familiar",
 						"Typora Clean - minimal and elegant",
-						"Claude-Like - warm and readable"
+						"Claude-Like - warm and readable",
+						"Vditor Light - the original default blue theme"
 					],
 					"description": "Select a built-in theme for the Markdown editor."
 				},

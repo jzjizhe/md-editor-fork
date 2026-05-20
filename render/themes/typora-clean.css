@@ -1,86 +1,87 @@
 /* Typora Clean Theme for Md Editor */
 body {
-  background-color: #fafafa;
+  background-color: #fafafa !important;
 }
 
 .vditor-ir .vditor-reset,
 .vditor-wysiwyg .vditor-reset,
 .vditor-sv .vditor-reset,
 .vditor-reset {
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-  font-size: 16px;
-  line-height: 1.8;
-  color: #333333;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  color: #333333 !important;
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 32px;
-  background-color: #fafafa;
+  background-color: #fafafa !important;
 }
 
 .vditor-reset h1 {
-  font-size: 2em;
-  font-weight: 700;
+  font-size: 2em !important;
+  font-weight: 700 !important;
   margin-top: 2em;
   margin-bottom: 1em;
-  color: #000000;
+  color: #000000 !important;
 }
 
 .vditor-reset h2 {
-  font-size: 1.5em;
-  font-weight: 700;
+  font-size: 1.5em !important;
+  font-weight: 700 !important;
   margin-top: 1.8em;
   margin-bottom: 0.8em;
-  color: #000000;
+  color: #000000 !important;
+  border-bottom: none !important;
 }
 
 .vditor-reset h3 {
-  font-size: 1.25em;
-  font-weight: 600;
+  font-size: 1.25em !important;
+  font-weight: 600 !important;
   margin-top: 1.5em;
   margin-bottom: 0.6em;
-  color: #000000;
+  color: #000000 !important;
 }
 
 .vditor-reset h4 {
-  font-size: 1em;
-  font-weight: 600;
+  font-size: 1em !important;
+  font-weight: 600 !important;
   margin-top: 1.2em;
   margin-bottom: 0.5em;
-  color: #333333;
+  color: #333333 !important;
 }
 
 .vditor-reset code:not(pre code) {
-  font-family: 'JetBrains Mono', 'Fira Code', Menlo, Monaco, monospace;
-  font-size: 0.9em;
-  background-color: #f0f0f0;
+  font-family: 'JetBrains Mono', 'Fira Code', Menlo, Monaco, monospace !important;
+  font-size: 0.9em !important;
+  background-color: #f0f0f0 !important;
   padding: 2px 6px;
   border-radius: 4px;
-  color: #d14;
+  color: #d14 !important;
 }
 
 .vditor-reset pre {
-  background-color: #f5f5f5;
+  background-color: #f5f5f5 !important;
   border: 1px solid #e8e8e8;
   border-radius: 4px;
   padding: 16px;
   overflow: auto;
-  font-size: 14px;
+  font-size: 14px !important;
   line-height: 1.6;
 }
 
 .vditor-reset pre code {
-  background-color: transparent;
+  background-color: transparent !important;
   padding: 0;
-  color: #333333;
+  color: #333333 !important;
   border-radius: 0;
 }
 
 .vditor-reset blockquote {
-  color: #666666;
-  border-left: 4px solid #ddd;
+  color: #666666 !important;
+  border-left: 4px solid #ddd !important;
   padding: 0.5em 1em;
   margin: 1em 0;
-  background-color: #f9f9f9;
+  background-color: #f9f9f9 !important;
 }
 
 .vditor-reset table {
@@ -91,18 +92,22 @@ body {
 
 .vditor-reset table th,
 .vditor-reset table td {
-  border: 1px solid #ddd;
+  border: 1px solid #ddd !important;
   padding: 8px 12px;
   text-align: left;
 }
 
 .vditor-reset table th {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2 !important;
   font-weight: 600;
 }
 
+.vditor-reset table tr {
+  background-color: #ffffff !important;
+}
+
 .vditor-reset a {
-  color: #4183c4;
+  color: #4183c4 !important;
   text-decoration: none;
 }
 
@@ -111,8 +116,9 @@ body {
 }
 
 .vditor-reset hr {
-  border: 0;
-  border-top: 1px solid #e0e0e0;
+  border: 0 !important;
+  border-top: 1px solid #e0e0e0 !important;
+  background-color: transparent !important;
   margin: 2em 0;
 }
 
@@ -128,4 +134,12 @@ body {
 .vditor-toolbar {
   background-color: #f5f5f5 !important;
   border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.vditor-ir .vditor-reset .vditor-ir__marker {
+  color: #999999 !important;
+}
+
+.vditor-ir .vditor-reset .vditor-ir__marker--heading {
+  color: #000000 !important;
 }

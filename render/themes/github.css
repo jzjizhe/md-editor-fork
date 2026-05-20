@@ -1,81 +1,87 @@
 /* GitHub Theme for Md Editor */
 body {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 }
 
 .vditor-ir .vditor-reset,
 .vditor-wysiwyg .vditor-reset,
 .vditor-sv .vditor-reset,
 .vditor-reset {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #1f2328;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  color: #1f2328 !important;
   max-width: 860px;
   margin: 0 auto;
   padding: 32px 28px;
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 }
 
 .vditor-reset h1 {
-  font-size: 2em;
-  font-weight: 600;
+  font-size: 2em !important;
+  font-weight: 600 !important;
   padding-bottom: 0.3em;
-  border-bottom: 1px solid #d1d9e0;
+  border-bottom: 1px solid #d1d9e0 !important;
   margin-top: 24px;
   margin-bottom: 16px;
+  color: #1f2328 !important;
 }
 
 .vditor-reset h2 {
-  font-size: 1.5em;
-  font-weight: 600;
+  font-size: 1.5em !important;
+  font-weight: 600 !important;
   padding-bottom: 0.3em;
-  border-bottom: 1px solid #d1d9e0;
+  border-bottom: 1px solid #d1d9e0 !important;
   margin-top: 24px;
   margin-bottom: 16px;
+  color: #1f2328 !important;
 }
 
 .vditor-reset h3 {
-  font-size: 1.25em;
-  font-weight: 600;
+  font-size: 1.25em !important;
+  font-weight: 600 !important;
   margin-top: 24px;
   margin-bottom: 16px;
+  color: #1f2328 !important;
 }
 
 .vditor-reset h4 {
-  font-size: 1em;
-  font-weight: 600;
+  font-size: 1em !important;
+  font-weight: 600 !important;
   margin-top: 24px;
   margin-bottom: 16px;
+  color: #1f2328 !important;
 }
 
 .vditor-reset code:not(pre code) {
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-  font-size: 85%;
-  background-color: rgba(175, 184, 193, 0.2);
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+  font-size: 85% !important;
+  background-color: rgba(175, 184, 193, 0.2) !important;
   padding: 0.2em 0.4em;
   border-radius: 6px;
+  color: #1f2328 !important;
 }
 
 .vditor-reset pre {
-  background-color: #f6f8fa;
+  background-color: #f6f8fa !important;
   border-radius: 6px;
   padding: 16px;
   overflow: auto;
-  font-size: 85%;
+  font-size: 85% !important;
   line-height: 1.45;
 }
 
 .vditor-reset pre code {
-  background-color: transparent;
+  background-color: transparent !important;
   padding: 0;
-  font-size: 100%;
+  font-size: 100% !important;
   border-radius: 0;
+  color: #1f2328 !important;
 }
 
 .vditor-reset blockquote {
-  color: #656d76;
-  border-left: 0.25em solid #d1d9e0;
+  color: #656d76 !important;
+  border-left: 0.25em solid #d1d9e0 !important;
   padding: 0 1em;
   margin: 0 0 16px 0;
 }
@@ -87,16 +93,21 @@ body {
 
 .vditor-reset table th,
 .vditor-reset table td {
-  border: 1px solid #d1d9e0;
+  border: 1px solid #d1d9e0 !important;
   padding: 6px 13px;
 }
 
+.vditor-reset table tr {
+  background-color: #ffffff !important;
+  border-top: 1px solid #d1d9e0 !important;
+}
+
 .vditor-reset table tr:nth-child(2n) {
-  background-color: #f6f8fa;
+  background-color: #f6f8fa !important;
 }
 
 .vditor-reset a {
-  color: #0969da;
+  color: #0969da !important;
   text-decoration: none;
 }
 
@@ -105,8 +116,9 @@ body {
 }
 
 .vditor-reset hr {
-  border: 0;
-  border-top: 1px solid #d1d9e0;
+  border: 0 !important;
+  border-top: 1px solid #d1d9e0 !important;
+  background-color: transparent !important;
   margin: 24px 0;
 }
 
@@ -122,4 +134,19 @@ body {
 .vditor-toolbar {
   background-color: #f6f8fa !important;
   border-bottom: 1px solid #d1d9e0 !important;
+}
+
+/* Override Vditor IR mode specific colors */
+.vditor-ir span[data-type="code-block-open-marker"],
+.vditor-ir span[data-type="code-block-close-marker"],
+.vditor-ir span[data-type="code-block-info"] {
+  color: #656d76 !important;
+}
+
+.vditor-ir .vditor-reset .vditor-ir__marker {
+  color: #656d76 !important;
+}
+
+.vditor-ir .vditor-reset .vditor-ir__marker--heading {
+  color: #1f2328 !important;
 }

@@ -51,24 +51,28 @@ class MarkdownEditorProvider {
         let htmlContent = (0, fs_1.readFileSync)(`${this.context.extensionPath}/render/index.html`, "utf8")
             .replace("{{rootPath}}", rootPath)
             .replace("{{baseUrl}}", baseUrl);
-        // Inject theme CSS before </head>
+        // Inject theme and custom CSS before </html> to avoid being removed by the script
+        let injectCss = '';
+        // Inject theme CSS
         if (themeName && themeName !== 'none') {
             const themePath = `${this.context.extensionPath}/render/themes/${themeName}.css`;
             try {
                 const themeCss = (0, fs_1.readFileSync)(themePath, "utf8");
-                htmlContent = htmlContent.replace('</head>', `<style id="md-editor-theme">${themeCss}</style>\n</head>`);
+                injectCss += themeCss + '\n';
             } catch (e) {
                 // Theme file not found, skip
             }
         }
         // Inject custom CSS after theme (higher priority)
         if (customCss) {
-            htmlContent = htmlContent.replace('</head>', `<style id="md-editor-custom">${customCss}</style>\n</head>`);
+            injectCss += customCss + '\n';
         }
         // Inject vscode theme color CSS
         if (useVscodeThemeColor) {
-            const themeColorCss = `body { --panel-background-color: var(--vscode-editor-background); --toolbar-background-color: var(--vscode-editor-background); --textarea-background-color: var(--vscode-editor-background); }`;
-            htmlContent = htmlContent.replace('</head>', `<style>${themeColorCss}</style>\n</head>`);
+            injectCss += `body { --panel-background-color: var(--vscode-editor-background); --toolbar-background-color: var(--vscode-editor-background); --textarea-background-color: var(--vscode-editor-background); }\n`;
+        }
+        if (injectCss) {
+            htmlContent = htmlContent.replace('</html>', `<style id="md-editor-theme-inject">${injectCss}</style>\n</html>`);
         }
         webview.html = buildPath(htmlContent, webview, contextPath);
         const handler = handler_1.Hanlder.bind(webviewPanel, document.uri);

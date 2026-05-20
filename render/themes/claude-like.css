@@ -1,91 +1,93 @@
 /* Claude-Like Theme for Md Editor */
 body {
-  background-color: #fffdf7;
+  background-color: #fffdf7 !important;
 }
 
 .vditor-ir .vditor-reset,
 .vditor-wysiwyg .vditor-reset,
 .vditor-sv .vditor-reset,
 .vditor-reset {
-  font-family: 'Freight Text Pro', 'Georgia', 'Times New Roman', 'Source Serif Pro', serif;
-  font-size: 17px;
-  line-height: 1.75;
-  color: #3d3929;
+  font-family: 'Freight Text Pro', 'Georgia', 'Times New Roman', 'Source Serif Pro', serif !important;
+  font-size: 17px !important;
+  line-height: 1.75 !important;
+  color: #3d3929 !important;
   max-width: 780px;
   margin: 0 auto;
   padding: 40px 32px;
-  background-color: #fffdf7;
+  background-color: #fffdf7 !important;
 }
 
 .vditor-reset h1,
 .vditor-reset h2,
 .vditor-reset h3,
 .vditor-reset h4 {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  color: #2c2518;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  color: #2c2518 !important;
 }
 
 .vditor-reset h1 {
-  font-size: 1.9em;
-  font-weight: 700;
+  font-size: 1.9em !important;
+  font-weight: 700 !important;
   margin-top: 1.8em;
   margin-bottom: 0.8em;
   letter-spacing: -0.02em;
+  border-bottom: none !important;
 }
 
 .vditor-reset h2 {
-  font-size: 1.4em;
-  font-weight: 600;
+  font-size: 1.4em !important;
+  font-weight: 600 !important;
   margin-top: 1.6em;
   margin-bottom: 0.7em;
+  border-bottom: none !important;
 }
 
 .vditor-reset h3 {
-  font-size: 1.2em;
-  font-weight: 600;
+  font-size: 1.2em !important;
+  font-weight: 600 !important;
   margin-top: 1.4em;
   margin-bottom: 0.6em;
 }
 
 .vditor-reset h4 {
-  font-size: 1em;
-  font-weight: 600;
+  font-size: 1em !important;
+  font-weight: 600 !important;
   margin-top: 1.2em;
   margin-bottom: 0.5em;
 }
 
 .vditor-reset code:not(pre code) {
-  font-family: 'Berkeley Mono', 'JetBrains Mono', 'Fira Code', monospace;
-  font-size: 0.85em;
-  background-color: #f5f0e8;
+  font-family: 'Berkeley Mono', 'JetBrains Mono', 'Fira Code', monospace !important;
+  font-size: 0.85em !important;
+  background-color: #f5f0e8 !important;
   padding: 2px 6px;
   border-radius: 4px;
-  color: #b35900;
+  color: #b35900 !important;
 }
 
 .vditor-reset pre {
-  background-color: #f8f4ec;
+  background-color: #f8f4ec !important;
   border: 1px solid #e8e0d4;
   border-radius: 8px;
   padding: 18px;
   overflow: auto;
-  font-size: 14px;
+  font-size: 14px !important;
   line-height: 1.6;
 }
 
 .vditor-reset pre code {
-  background-color: transparent;
+  background-color: transparent !important;
   padding: 0;
-  color: #3d3929;
+  color: #3d3929 !important;
   border-radius: 0;
 }
 
 .vditor-reset blockquote {
-  color: #6b5e4b;
-  border-left: 3px solid #c9a96e;
+  color: #6b5e4b !important;
+  border-left: 3px solid #c9a96e !important;
   padding: 0.5em 1.2em;
   margin: 1.2em 0;
-  background-color: #fdf8f0;
+  background-color: #fdf8f0 !important;
   border-radius: 0 6px 6px 0;
 }
 
@@ -97,21 +99,25 @@ body {
 
 .vditor-reset table th,
 .vditor-reset table td {
-  border: 1px solid #e0d8cc;
+  border: 1px solid #e0d8cc !important;
   padding: 8px 14px;
 }
 
 .vditor-reset table th {
-  background-color: #f5f0e8;
+  background-color: #f5f0e8 !important;
   font-weight: 600;
 }
 
+.vditor-reset table tr {
+  background-color: #fffdf7 !important;
+}
+
 .vditor-reset table tr:nth-child(2n) {
-  background-color: #fdfaf4;
+  background-color: #fdfaf4 !important;
 }
 
 .vditor-reset a {
-  color: #b35900;
+  color: #b35900 !important;
   text-decoration: none;
   border-bottom: 1px solid rgba(179, 89, 0, 0.3);
 }
@@ -121,8 +127,9 @@ body {
 }
 
 .vditor-reset hr {
-  border: 0;
-  border-top: 1px solid #e0d8cc;
+  border: 0 !important;
+  border-top: 1px solid #e0d8cc !important;
+  background-color: transparent !important;
   margin: 2em 0;
 }
 
@@ -138,4 +145,12 @@ body {
 .vditor-toolbar {
   background-color: #f8f4ec !important;
   border-bottom: 1px solid #e0d8cc !important;
+}
+
+.vditor-ir .vditor-reset .vditor-ir__marker {
+  color: #a69680 !important;
+}
+
+.vditor-ir .vditor-reset .vditor-ir__marker--heading {
+  color: #2c2518 !important;
 }
