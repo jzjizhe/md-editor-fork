@@ -109,9 +109,24 @@ class MarkdownEditorProvider {
                 }
             }
         });
+        // 监听磁盘文件变化（外部CLI/编辑器修改时自动刷新，支持Remote环境）
+        const fileDir = vscode.Uri.joinPath(document.uri, '..');
+        const fileName = (0, path_1.basename)(document.uri.fsPath);
+        const fileWatcher = vscode.workspace.createFileSystemWatcher(new vscode.RelativePattern(fileDir, fileName));
+        const onDiskChange = () => {
+            try {
+                const content = (0, fs_1.readFileSync)(document.uri.fsPath, 'utf8');
+                if (this.text[document.uri.fsPath] !== content) {
+                    this.text[document.uri.fsPath] = content;
+                    handler.emit("setValue", content);
+                }
+            } catch (e) { }
+        };
+        fileWatcher.onDidChange(onDiskChange);
         webviewPanel.onDidDispose(() => {
             saveListener.dispose();
             changeListener.dispose();
+            fileWatcher.dispose();
         });
         this.handleEvent(document, handler);
     }
