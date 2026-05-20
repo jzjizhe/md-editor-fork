@@ -29,10 +29,7 @@ body {
 .vditor-sv .vditor-reset,
 .vditor-reset {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif !important;
-  font-size: 14px !important;
-  line-height: 22px !important;
   color: var(--vscode-editor-foreground, #1e1e1e) !important;
-  padding: 0 26px;
   word-wrap: break-word;
 }
 
@@ -80,13 +77,11 @@ body {
   background-color: var(--vscode-textCodeBlock-background, #f3f3f3) !important;
   border: 1px solid var(--vscode-widget-border, rgba(0, 0, 0, 0.18));
   border-radius: 3px;
-  padding: 16px;
   overflow: auto;
 }
 
 .vditor-reset pre code {
   background-color: transparent !important;
-  padding: 0;
   color: var(--vscode-editor-foreground, #1e1e1e) !important;
 }
 
