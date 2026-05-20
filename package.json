@@ -1,0 +1,81 @@
+{
+	"name": "md-editor",
+	"displayName": "Md Editor",
+	"description": "即时预览的markdown编辑器，基本接近 Typora 的编辑体验。",
+	"publisher": "seepine",
+	"version": "0.1.1",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"icon": "icon.png",
+	"keywords": [
+		"md",
+		"md-editor",
+		"markdown",
+		"typora"
+	],
+	"categories": [
+		"Programming Languages"
+	],
+	"activationEvents": [],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "Md Editor",
+			"properties": {
+				"md-editor.customCss": {
+					"type": "string",
+					"default": "",
+					"description": "Custom CSS rules to inject into the Markdown editor. Use this to customize the appearance of the rendered Markdown."
+				},
+				"md-editor.useVscodeThemeColor": {
+					"type": "boolean",
+					"default": true,
+					"description": "Use VS Code theme's background color as the editor's background color."
+				}
+			}
+		},
+		"customEditors": [
+			{
+				"viewType": "seepine.md-editor",
+				"displayName": "Markdown Editor",
+				"priority": "default",
+				"selector": [
+					{
+						"filenamePattern": "*.md"
+					}
+				]
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "echo skipped",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js",
+		"build": "npx vsce package",
+		"publish": "npx vsce publish"
+	},
+	"devDependencies": {
+		"@types/mocha": "^10.0.1",
+		"@types/node": "16.x",
+		"@types/vscode": "^1.60.0",
+		"@typescript-eslint/eslint-plugin": "^6.4.1",
+		"@typescript-eslint/parser": "^6.4.1",
+		"@vscode/test-electron": "^2.3.4",
+		"eslint": "^8.47.0",
+		"glob": "^10.3.3",
+		"mocha": "^10.2.0",
+		"typescript": "^5.1.6",
+		"vsce": "^2.15.0"
+	},
+	"packageManager": "yarn@1.22.22",
+	"__metadata": {
+		"installedTimestamp": 1779176868079,
+		"targetPlatform": "undefined",
+		"size": 21109155
+	}
+}
