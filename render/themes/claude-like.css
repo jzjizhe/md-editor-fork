@@ -11,8 +11,6 @@ body {
   font-size: 17px !important;
   line-height: 1.75 !important;
   color: #3d3929 !important;
-  max-width: 780px;
-  margin: 0 auto;
   padding: 40px 32px;
   background-color: #fffdf7 !important;
 }
