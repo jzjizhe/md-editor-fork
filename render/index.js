@@ -83,8 +83,31 @@ const init = () => {
           window.handler.on("insertValue", (val) => {
             vditor.insertValue(val);
           });
+          // 外部文件变化时更新内容，保持光标位置
+          let pendingValue = null;
           window.handler.on("setValue", (val) => {
-            vditor.setValue(val);
+            const editorElement = document.querySelector('.vditor-content');
+            const hasFocus = editorElement && editorElement.contains(document.activeElement);
+            if (hasFocus) {
+              // 用户正在编辑，先暂存，等失去焦点时再更新
+              pendingValue = val;
+            } else {
+              vditor.setValue(val);
+              pendingValue = null;
+            }
+          });
+          // 失去焦点时应用暂存的内容
+          document.addEventListener('focusout', () => {
+            if (pendingValue !== null) {
+              setTimeout(() => {
+                const editorElement = document.querySelector('.vditor-content');
+                const stillFocused = editorElement && editorElement.contains(document.activeElement);
+                if (!stillFocused && pendingValue !== null) {
+                  vditor.setValue(pendingValue);
+                  pendingValue = null;
+                }
+              }, 100);
+            }
           });
           // vditor.setTheme('dark', 'dark', 'native');
           // document.querySelector('body').style.backgroundColor='#2f363d';
