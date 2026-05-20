@@ -1,0 +1,156 @@
+/* VS Code Markdown Preview Theme for Md Editor */
+body {
+  background-color: var(--vscode-editor-background, #ffffff) !important;
+}
+
+.vditor-ir .vditor-reset,
+.vditor-wysiwyg .vditor-reset,
+.vditor-sv .vditor-reset,
+.vditor-reset {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif !important;
+  font-size: 14px !important;
+  line-height: 22px !important;
+  color: var(--vscode-editor-foreground, #1e1e1e) !important;
+  padding: 0 26px;
+  word-wrap: break-word;
+  background-color: var(--vscode-editor-background, #ffffff) !important;
+}
+
+.vditor-reset h1,
+.vditor-reset h2,
+.vditor-reset h3,
+.vditor-reset h4,
+.vditor-reset h5,
+.vditor-reset h6 {
+  font-weight: 600 !important;
+  margin-top: 24px !important;
+  margin-bottom: 16px !important;
+  line-height: 1.25 !important;
+  color: var(--vscode-editor-foreground, #1e1e1e) !important;
+}
+
+.vditor-reset h1 {
+  font-size: 2em !important;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18) !important;
+}
+
+.vditor-reset h2 {
+  font-size: 1.5em !important;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18) !important;
+}
+
+.vditor-reset h3 {
+  font-size: 1.25em !important;
+}
+
+.vditor-reset h4 {
+  font-size: 1em !important;
+}
+
+.vditor-reset h5 {
+  font-size: 0.875em !important;
+}
+
+.vditor-reset h6 {
+  font-size: 0.85em !important;
+}
+
+.vditor-reset code:not(pre code) {
+  font-family: var(--vscode-editor-font-family, 'SF Mono', Monaco, Menlo, Consolas, 'Ubuntu Mono', 'Liberation Mono', 'DejaVu Sans Mono', 'Courier New', monospace) !important;
+  font-size: 1em !important;
+  line-height: 1.357em;
+  background-color: transparent !important;
+  color: var(--vscode-editor-foreground, #1e1e1e) !important;
+}
+
+.vditor-reset pre {
+  background-color: var(--vscode-textCodeBlock-background, #f3f3f3) !important;
+  border: 1px solid var(--vscode-widget-border, rgba(0, 0, 0, 0.18));
+  border-radius: 3px;
+  padding: 16px;
+  overflow: auto;
+}
+
+.vditor-reset pre code {
+  background-color: transparent !important;
+  padding: 0;
+  color: var(--vscode-editor-foreground, #1e1e1e) !important;
+  tab-size: 4;
+}
+
+.vditor-reset blockquote {
+  color: var(--vscode-editor-foreground, #1e1e1e) !important;
+  border-left: 5px solid rgba(0, 0, 0, 0.18) !important;
+  padding: 0 16px 0 10px;
+  margin: 0 0 16px 0;
+  border-radius: 2px;
+}
+
+.vditor-reset table {
+  border-collapse: collapse;
+  margin-bottom: 0.7em;
+}
+
+.vditor-reset table th {
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.69) !important;
+  padding: 5px 10px;
+  font-weight: 600;
+}
+
+.vditor-reset table td {
+  padding: 5px 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.18) !important;
+}
+
+.vditor-reset table tr {
+  background-color: transparent !important;
+  border-top: none !important;
+}
+
+.vditor-reset a {
+  color: var(--vscode-textLink-foreground, #006ab1) !important;
+  text-decoration: none;
+}
+
+.vditor-reset a:hover {
+  text-decoration: underline;
+}
+
+.vditor-reset hr {
+  border: 0 !important;
+  height: 1px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18) !important;
+  background-color: transparent !important;
+  margin: 16px 0;
+}
+
+.vditor-reset p {
+  margin-bottom: 16px;
+}
+
+.vditor-reset ul,
+.vditor-reset ol {
+  margin-bottom: 0.7em;
+}
+
+.vditor-reset img,
+.vditor-reset video {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.vditor-toolbar {
+  background-color: var(--vscode-editor-background, #ffffff) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18) !important;
+}
+
+.vditor-ir .vditor-reset .vditor-ir__marker {
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.vditor-ir .vditor-reset .vditor-ir__marker--heading {
+  color: var(--vscode-editor-foreground, #1e1e1e) !important;
+}

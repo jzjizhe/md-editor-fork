@@ -12,6 +12,7 @@ function activate(context) {
             { label: '$(book) Typora Clean', description: 'Minimal and elegant', value: 'typora-clean' },
             { label: '$(heart) Claude-Like', description: 'Warm and readable', value: 'claude-like' },
             { label: '$(symbol-color) Vditor Light', description: 'The original default blue theme', value: 'vditor-light' },
+            { label: '$(preview) VS Code', description: "Matches VS Code's built-in Markdown preview", value: 'vscode' },
             { label: '$(circle-slash) None', description: 'No built-in theme (use customCss only)', value: 'none' }
         ];
         const picked = await vscode.window.showQuickPick(themes, {
