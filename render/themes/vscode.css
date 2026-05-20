@@ -1,4 +1,25 @@
 /* VS Code Markdown Preview Theme for Md Editor */
+/* Override Vditor CSS variables */
+.vditor {
+  --border-color: rgba(0, 0, 0, 0.18) !important;
+  --second-color: rgba(88, 96, 105, 0.36) !important;
+  --panel-background-color: var(--vscode-editor-background, #ffffff) !important;
+  --toolbar-background-color: var(--vscode-editor-background, #ffffff) !important;
+  --toolbar-icon-color: #586069 !important;
+  --toolbar-icon-hover-color: var(--vscode-textLink-foreground, #006ab1) !important;
+  --textarea-background-color: var(--vscode-editor-background, #ffffff) !important;
+  --textarea-text-color: var(--vscode-editor-foreground, #1e1e1e) !important;
+  --heading-border-color: rgba(0, 0, 0, 0.18) !important;
+  --blockquote-color: var(--vscode-editor-foreground, #1e1e1e) !important;
+  --ir-heading-color: var(--vscode-editor-foreground, #1e1e1e) !important;
+  --ir-title-color: #808080 !important;
+  --ir-bi-color: var(--vscode-editor-foreground, #1e1e1e) !important;
+  --ir-link-color: var(--vscode-textLink-foreground, #006ab1) !important;
+  --ir-bracket-color: var(--vscode-textLink-foreground, #006ab1) !important;
+  --ir-paren-color: #586069 !important;
+  --count-background-color: rgba(27, 31, 35, 0.05) !important;
+}
+
 body {
   background-color: var(--vscode-editor-background, #ffffff) !important;
 }
@@ -13,7 +34,6 @@ body {
   color: var(--vscode-editor-foreground, #1e1e1e) !important;
   padding: 0 26px;
   word-wrap: break-word;
-  background-color: var(--vscode-editor-background, #ffffff) !important;
 }
 
 .vditor-reset h1,
@@ -49,19 +69,10 @@ body {
   font-size: 1em !important;
 }
 
-.vditor-reset h5 {
-  font-size: 0.875em !important;
-}
-
-.vditor-reset h6 {
-  font-size: 0.85em !important;
-}
-
 .vditor-reset code:not(pre code) {
-  font-family: var(--vscode-editor-font-family, 'SF Mono', Monaco, Menlo, Consolas, 'Ubuntu Mono', 'Liberation Mono', 'DejaVu Sans Mono', 'Courier New', monospace) !important;
+  font-family: var(--vscode-editor-font-family, 'SF Mono', Monaco, Menlo, Consolas, monospace) !important;
   font-size: 1em !important;
-  line-height: 1.357em;
-  background-color: transparent !important;
+  background-color: rgba(27, 31, 35, 0.05) !important;
   color: var(--vscode-editor-foreground, #1e1e1e) !important;
 }
 
@@ -77,7 +88,6 @@ body {
   background-color: transparent !important;
   padding: 0;
   color: var(--vscode-editor-foreground, #1e1e1e) !important;
-  tab-size: 4;
 }
 
 .vditor-reset blockquote {
@@ -85,29 +95,27 @@ body {
   border-left: 5px solid rgba(0, 0, 0, 0.18) !important;
   padding: 0 16px 0 10px;
   margin: 0 0 16px 0;
-  border-radius: 2px;
-}
-
-.vditor-reset table {
-  border-collapse: collapse;
-  margin-bottom: 0.7em;
 }
 
 .vditor-reset table th {
   text-align: left;
   border-bottom: 1px solid rgba(0, 0, 0, 0.69) !important;
   padding: 5px 10px;
-  font-weight: 600;
 }
 
 .vditor-reset table td {
   padding: 5px 10px;
+  border: none !important;
   border-top: 1px solid rgba(0, 0, 0, 0.18) !important;
 }
 
 .vditor-reset table tr {
   background-color: transparent !important;
   border-top: none !important;
+}
+
+.vditor-reset table tbody tr:nth-child(2n) {
+  background-color: transparent !important;
 }
 
 .vditor-reset a {
@@ -124,33 +132,9 @@ body {
   height: 1px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.18) !important;
   background-color: transparent !important;
-  margin: 16px 0;
-}
-
-.vditor-reset p {
-  margin-bottom: 16px;
-}
-
-.vditor-reset ul,
-.vditor-reset ol {
-  margin-bottom: 0.7em;
-}
-
-.vditor-reset img,
-.vditor-reset video {
-  max-width: 100%;
-  max-height: 100%;
 }
 
 .vditor-toolbar {
   background-color: var(--vscode-editor-background, #ffffff) !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.18) !important;
-}
-
-.vditor-ir .vditor-reset .vditor-ir__marker {
-  color: rgba(0, 0, 0, 0.4) !important;
-}
-
-.vditor-ir .vditor-reset .vditor-ir__marker--heading {
-  color: var(--vscode-editor-foreground, #1e1e1e) !important;
 }

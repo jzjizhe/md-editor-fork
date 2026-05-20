@@ -1,4 +1,25 @@
 /* GitHub Theme for Md Editor */
+/* Override Vditor CSS variables */
+.vditor {
+  --border-color: #d1d9e0 !important;
+  --second-color: rgba(175, 184, 193, 0.4) !important;
+  --panel-background-color: #ffffff !important;
+  --toolbar-background-color: #f6f8fa !important;
+  --toolbar-icon-color: #656d76 !important;
+  --toolbar-icon-hover-color: #1f2328 !important;
+  --textarea-background-color: #ffffff !important;
+  --textarea-text-color: #1f2328 !important;
+  --heading-border-color: #d1d9e0 !important;
+  --blockquote-color: #656d76 !important;
+  --ir-heading-color: #1f2328 !important;
+  --ir-title-color: #656d76 !important;
+  --ir-bi-color: #1f2328 !important;
+  --ir-link-color: #0969da !important;
+  --ir-bracket-color: #0969da !important;
+  --ir-paren-color: #656d76 !important;
+  --count-background-color: rgba(175, 184, 193, 0.2) !important;
+}
+
 body {
   background-color: #ffffff !important;
 }

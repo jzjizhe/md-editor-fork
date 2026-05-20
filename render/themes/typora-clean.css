@@ -1,4 +1,25 @@
 /* Typora Clean Theme for Md Editor */
+/* Override Vditor CSS variables */
+.vditor {
+  --border-color: #e0e0e0 !important;
+  --second-color: rgba(0, 0, 0, 0.2) !important;
+  --panel-background-color: #fafafa !important;
+  --toolbar-background-color: #f5f5f5 !important;
+  --toolbar-icon-color: #666666 !important;
+  --toolbar-icon-hover-color: #333333 !important;
+  --textarea-background-color: #fafafa !important;
+  --textarea-text-color: #333333 !important;
+  --heading-border-color: #e0e0e0 !important;
+  --blockquote-color: #666666 !important;
+  --ir-heading-color: #000000 !important;
+  --ir-title-color: #999999 !important;
+  --ir-bi-color: #333333 !important;
+  --ir-link-color: #4183c4 !important;
+  --ir-bracket-color: #4183c4 !important;
+  --ir-paren-color: #999999 !important;
+  --count-background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
 body {
   background-color: #fafafa !important;
 }

@@ -1,4 +1,25 @@
 /* Claude-Like Theme for Md Editor */
+/* Override Vditor CSS variables */
+.vditor {
+  --border-color: #e0d8cc !important;
+  --second-color: rgba(61, 57, 41, 0.2) !important;
+  --panel-background-color: #fffdf7 !important;
+  --toolbar-background-color: #f8f4ec !important;
+  --toolbar-icon-color: #6b5e4b !important;
+  --toolbar-icon-hover-color: #2c2518 !important;
+  --textarea-background-color: #fffdf7 !important;
+  --textarea-text-color: #3d3929 !important;
+  --heading-border-color: #e0d8cc !important;
+  --blockquote-color: #6b5e4b !important;
+  --ir-heading-color: #2c2518 !important;
+  --ir-title-color: #a69680 !important;
+  --ir-bi-color: #3d3929 !important;
+  --ir-link-color: #b35900 !important;
+  --ir-bracket-color: #b35900 !important;
+  --ir-paren-color: #a69680 !important;
+  --count-background-color: rgba(61, 57, 41, 0.08) !important;
+}
+
 body {
   background-color: #fffdf7 !important;
 }
