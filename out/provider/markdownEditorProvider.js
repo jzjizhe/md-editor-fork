@@ -109,11 +109,8 @@ class MarkdownEditorProvider {
                 }
             }
         });
-        // 监听磁盘文件变化（外部CLI/编辑器修改时自动刷新，支持Remote环境）
-        const fileDir = vscode.Uri.joinPath(document.uri, '..');
-        const fileName = (0, path_1.basename)(document.uri.fsPath);
-        const fileWatcher = vscode.workspace.createFileSystemWatcher(new vscode.RelativePattern(fileDir, fileName));
-        const onDiskChange = async () => {
+        // 轮询检测文件变化（支持Remote/codelab环境，外部CLI修改时自动刷新）
+        const pollInterval = setInterval(async () => {
             try {
                 const raw = await vscode.workspace.fs.readFile(document.uri);
                 const content = Buffer.from(raw).toString('utf8');
@@ -122,12 +119,11 @@ class MarkdownEditorProvider {
                     handler.emit("setValue", content);
                 }
             } catch (e) { }
-        };
-        fileWatcher.onDidChange(onDiskChange);
+        }, 1000);
         webviewPanel.onDidDispose(() => {
             saveListener.dispose();
             changeListener.dispose();
-            fileWatcher.dispose();
+            clearInterval(pollInterval);
         });
         this.handleEvent(document, handler);
     }
