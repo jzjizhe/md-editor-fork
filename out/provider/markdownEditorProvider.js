@@ -45,14 +45,25 @@ class MarkdownEditorProvider {
             .replace(/\?.+$/, "")
             .replace("https://git", "https://file");
         const config = vscode.workspace.getConfiguration('md-editor');
+        const themeName = config.get('theme', 'github');
         const customCss = config.get('customCss', '');
-        const useVscodeThemeColor = config.get('useVscodeThemeColor', true);
+        const useVscodeThemeColor = config.get('useVscodeThemeColor', false);
         let htmlContent = (0, fs_1.readFileSync)(`${this.context.extensionPath}/render/index.html`, "utf8")
             .replace("{{rootPath}}", rootPath)
             .replace("{{baseUrl}}", baseUrl);
-        // Inject custom CSS before </head>
+        // Inject theme CSS before </head>
+        if (themeName && themeName !== 'none') {
+            const themePath = `${this.context.extensionPath}/render/themes/${themeName}.css`;
+            try {
+                const themeCss = (0, fs_1.readFileSync)(themePath, "utf8");
+                htmlContent = htmlContent.replace('</head>', `<style id="md-editor-theme">${themeCss}</style>\n</head>`);
+            } catch (e) {
+                // Theme file not found, skip
+            }
+        }
+        // Inject custom CSS after theme (higher priority)
         if (customCss) {
-            htmlContent = htmlContent.replace('</head>', `<style>${customCss}</style>\n</head>`);
+            htmlContent = htmlContent.replace('</head>', `<style id="md-editor-custom">${customCss}</style>\n</head>`);
         }
         // Inject vscode theme color CSS
         if (useVscodeThemeColor) {

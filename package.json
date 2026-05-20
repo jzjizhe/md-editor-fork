@@ -21,17 +21,35 @@
 	"activationEvents": [],
 	"main": "./out/extension.js",
 	"contributes": {
+		"commands": [
+			{
+				"command": "md-editor.switchTheme",
+				"title": "Md Editor: Switch Theme"
+			}
+		],
 		"configuration": {
 			"title": "Md Editor",
 			"properties": {
+				"md-editor.theme": {
+					"type": "string",
+					"default": "github",
+					"enum": ["none", "github", "typora-clean", "claude-like"],
+					"enumDescriptions": [
+						"No built-in theme (use customCss only)",
+						"GitHub style - clean and familiar",
+						"Typora Clean - minimal and elegant",
+						"Claude-Like - warm and readable"
+					],
+					"description": "Select a built-in theme for the Markdown editor."
+				},
 				"md-editor.customCss": {
 					"type": "string",
 					"default": "",
-					"description": "Custom CSS rules to inject into the Markdown editor. Use this to customize the appearance of the rendered Markdown."
+					"description": "Custom CSS rules to inject into the Markdown editor (applied after theme)."
 				},
 				"md-editor.useVscodeThemeColor": {
 					"type": "boolean",
-					"default": true,
+					"default": false,
 					"description": "Use VS Code theme's background color as the editor's background color."
 				}
 			}

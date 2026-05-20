@@ -1,0 +1,141 @@
+/* Claude-Like Theme for Md Editor */
+body {
+  background-color: #fffdf7;
+}
+
+.vditor-ir .vditor-reset,
+.vditor-wysiwyg .vditor-reset,
+.vditor-sv .vditor-reset,
+.vditor-reset {
+  font-family: 'Freight Text Pro', 'Georgia', 'Times New Roman', 'Source Serif Pro', serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #3d3929;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  background-color: #fffdf7;
+}
+
+.vditor-reset h1,
+.vditor-reset h2,
+.vditor-reset h3,
+.vditor-reset h4 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #2c2518;
+}
+
+.vditor-reset h1 {
+  font-size: 1.9em;
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.8em;
+  letter-spacing: -0.02em;
+}
+
+.vditor-reset h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-top: 1.6em;
+  margin-bottom: 0.7em;
+}
+
+.vditor-reset h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-top: 1.4em;
+  margin-bottom: 0.6em;
+}
+
+.vditor-reset h4 {
+  font-size: 1em;
+  font-weight: 600;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.vditor-reset code:not(pre code) {
+  font-family: 'Berkeley Mono', 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.85em;
+  background-color: #f5f0e8;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #b35900;
+}
+
+.vditor-reset pre {
+  background-color: #f8f4ec;
+  border: 1px solid #e8e0d4;
+  border-radius: 8px;
+  padding: 18px;
+  overflow: auto;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.vditor-reset pre code {
+  background-color: transparent;
+  padding: 0;
+  color: #3d3929;
+  border-radius: 0;
+}
+
+.vditor-reset blockquote {
+  color: #6b5e4b;
+  border-left: 3px solid #c9a96e;
+  padding: 0.5em 1.2em;
+  margin: 1.2em 0;
+  background-color: #fdf8f0;
+  border-radius: 0 6px 6px 0;
+}
+
+.vditor-reset table {
+  border-collapse: collapse;
+  width: auto;
+  margin: 1em 0;
+}
+
+.vditor-reset table th,
+.vditor-reset table td {
+  border: 1px solid #e0d8cc;
+  padding: 8px 14px;
+}
+
+.vditor-reset table th {
+  background-color: #f5f0e8;
+  font-weight: 600;
+}
+
+.vditor-reset table tr:nth-child(2n) {
+  background-color: #fdfaf4;
+}
+
+.vditor-reset a {
+  color: #b35900;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(179, 89, 0, 0.3);
+}
+
+.vditor-reset a:hover {
+  border-bottom-color: #b35900;
+}
+
+.vditor-reset hr {
+  border: 0;
+  border-top: 1px solid #e0d8cc;
+  margin: 2em 0;
+}
+
+.vditor-reset ul,
+.vditor-reset ol {
+  padding-left: 2em;
+}
+
+.vditor-reset li + li {
+  margin-top: 0.3em;
+}
+
+.vditor-toolbar {
+  background-color: #f8f4ec !important;
+  border-bottom: 1px solid #e0d8cc !important;
+}

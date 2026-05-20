@@ -1,0 +1,131 @@
+/* Typora Clean Theme for Md Editor */
+body {
+  background-color: #fafafa;
+}
+
+.vditor-ir .vditor-reset,
+.vditor-wysiwyg .vditor-reset,
+.vditor-sv .vditor-reset,
+.vditor-reset {
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  background-color: #fafafa;
+}
+
+.vditor-reset h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  color: #000000;
+}
+
+.vditor-reset h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.8em;
+  color: #000000;
+}
+
+.vditor-reset h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+  color: #000000;
+}
+
+.vditor-reset h4 {
+  font-size: 1em;
+  font-weight: 600;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  color: #333333;
+}
+
+.vditor-reset code:not(pre code) {
+  font-family: 'JetBrains Mono', 'Fira Code', Menlo, Monaco, monospace;
+  font-size: 0.9em;
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #d14;
+}
+
+.vditor-reset pre {
+  background-color: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 16px;
+  overflow: auto;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.vditor-reset pre code {
+  background-color: transparent;
+  padding: 0;
+  color: #333333;
+  border-radius: 0;
+}
+
+.vditor-reset blockquote {
+  color: #666666;
+  border-left: 4px solid #ddd;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  background-color: #f9f9f9;
+}
+
+.vditor-reset table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.vditor-reset table th,
+.vditor-reset table td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.vditor-reset table th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+}
+
+.vditor-reset a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.vditor-reset a:hover {
+  text-decoration: underline;
+}
+
+.vditor-reset hr {
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+  margin: 2em 0;
+}
+
+.vditor-reset ul,
+.vditor-reset ol {
+  padding-left: 2em;
+}
+
+.vditor-reset li + li {
+  margin-top: 0.3em;
+}
+
+.vditor-toolbar {
+  background-color: #f5f5f5 !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
