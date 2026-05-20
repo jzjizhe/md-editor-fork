@@ -113,9 +113,10 @@ class MarkdownEditorProvider {
         const fileDir = vscode.Uri.joinPath(document.uri, '..');
         const fileName = (0, path_1.basename)(document.uri.fsPath);
         const fileWatcher = vscode.workspace.createFileSystemWatcher(new vscode.RelativePattern(fileDir, fileName));
-        const onDiskChange = () => {
+        const onDiskChange = async () => {
             try {
-                const content = (0, fs_1.readFileSync)(document.uri.fsPath, 'utf8');
+                const raw = await vscode.workspace.fs.readFile(document.uri);
+                const content = Buffer.from(raw).toString('utf8');
                 if (this.text[document.uri.fsPath] !== content) {
                     this.text[document.uri.fsPath] = content;
                     handler.emit("setValue", content);
