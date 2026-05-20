@@ -29,10 +29,7 @@ body {
 .vditor-sv .vditor-reset,
 .vditor-reset {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif !important;
-  font-size: 16px !important;
-  line-height: 1.6 !important;
   color: #1f2328 !important;
-  padding: 32px 28px;
   background-color: #ffffff !important;
 }
 
@@ -84,17 +81,11 @@ body {
 .vditor-reset pre {
   background-color: #f6f8fa !important;
   border-radius: 6px;
-  padding: 16px;
   overflow: auto;
-  font-size: 85% !important;
-  line-height: 1.45;
 }
 
 .vditor-reset pre code {
   background-color: transparent !important;
-  padding: 0;
-  font-size: 100% !important;
-  border-radius: 0;
   color: #1f2328 !important;
 }
 
